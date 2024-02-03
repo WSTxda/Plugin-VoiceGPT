@@ -1,0 +1,14 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_shortcut"
+        android:shortcutId="open_assistant_shortcut"
+        android:shortcutLongLabel="@string/shortcut_label_assistant_long"
+        android:shortcutShortLabel="@string/shortcut_label_assistant">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.wstxda.switchai.services.DigitalAssistantFallbackService"
+            android:targetPackage="com.wstxda.switchai" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,20 @@
+[versions]
+agp = "8.10.0"
+kotlin = "2.1.20"
+preference = "1.2.1"
+appcompat = "1.7.0"
+navigation = "2.9.0"
+material = "1.14.0-alpha01"
+aboutLibraries = "12.1.2"
+
+[libraries]
+androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-navigation = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+aboutlibraries-view = { module = "com.mikepenz:aboutlibraries", version.ref = "aboutLibraries" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }

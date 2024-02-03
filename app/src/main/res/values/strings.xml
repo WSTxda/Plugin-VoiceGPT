@@ -1,0 +1,102 @@
+<resources>
+
+    <!--app names-->
+
+    <string name="app_name" translatable="false">SwitchAI</string>
+    <string name="app_settings">Assistant settings</string>
+
+    <!--assistant names-->
+
+    <string name="chatgpt">ChatGPT</string>
+    <string name="claude">Claude</string>
+    <string name="copilot">Copilot</string>
+    <string name="deepseek">DeepSeek</string>
+    <string name="gemini">Gemini</string>
+    <string name="grok">Grok</string>
+    <string name="kimi">Kimi</string>
+    <string name="le_chat">Le Chat</string>
+    <string name="manus">Manus</string>
+    <string name="meta">Meta AI</string>
+    <string name="perplexity">Perplexity</string>
+    <string name="qwen">Qwen</string>
+    <string name="ultimate_alexa">Ultimate Alexa</string>
+
+    <!--preferences-->
+
+    <string name="pref_category_appearance">Appearance</string>
+    <string name="pref_category_selector">Selector</string>
+    <string name="pref_category_shortcuts">Shortcuts</string>
+    <string name="pref_category_about">About</string>
+
+    <string name="pref_wstxda" translatable="false">WSTxda</string>
+    <string name="pref_github" translatable="false">GitHub</string>
+    <string name="pref_developer">Developer</string>
+    <string name="pref_source_code">Source code repository</string>
+
+    <string name="pref_theme">Theme</string>
+
+    <string name="pref_used_library">Libraries</string>
+    <string name="pref_used_library_summary">Open source licenses</string>
+
+    <string name="pref_version">Version</string>
+    <string name="pref_version_number" translatable="false">%s</string>
+
+    <string name="pref_digital_assistant">Digital assistant</string>
+
+    <string name="pref_setup_digital_assistant">Setup digital assistant</string>
+    <string name="pref_setup_digital_assistant_summary">Set SwitchAI as default digital assistant app</string>
+
+    <string name="pref_assistant_selector">Use assistant selector</string>
+    <string name="pref_assistant_selector_summary">If enabled, select an assistant each time. Otherwise, use the <b>digital assistant</b> option</string>
+
+    <string name="pref_manage_assistant">Manage assistants</string>
+    <string name="pref_manage_assistant_summary">Choose which assistants are displayed in the selector</string>
+
+    <string name="pref_assistant_tile">Open digital assistant tile</string>
+    <string name="pref_assistant_tile_summary">Add open digital assistant tile in quick settings panel</string>
+
+    <!--theme selector-->
+
+    <string name="theme_select">Select theme</string>
+    <!--themes modes-->
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <!--update checker-->
+
+    <string name="update_checker_button">Check updates</string>
+    <string name="update_checker_download_button">Download</string>
+    <!--updater messages-->
+    <string name="update_checker_no_update">No update available</string>
+    <string name="update_checker_update_available">New update available: %s</string>
+    <string name="update_checker_no_internet">No internet connection</string>
+    <string name="update_checker_generic_error">Something went wrong. Please try again later</string>
+
+    <!--digital/selector/open assistant-->
+
+    <string name="assistant_select">Select assistant</string>
+    <!--selector assistant categories-->
+    <string name="assistant_category_pin">Pinned</string>
+    <string name="assistant_category_recent">Recently used</string>
+    <string name="assistant_category_all">Assistants</string>
+    <!--open assistant messages-->
+    <string name="assistant_open">Open assistant</string>
+    <string name="assistant_open_error">Error open assistant</string>
+    <string name="assistant_application_not_found">Application not found. Please install it first</string>
+    <string name="assistant_not_implemented">Assistant not implemented yet…</string>
+    <!--setup digital assistant dialog-->
+    <string name="digital_assistant_setup_title">Default digital assistant app</string>
+    <string name="digital_assistant_setup_message">In settings, select <b>SwitchAI</b> as default digital assistant app to quickly launch your selected assistant using device gestures, buttons and more…</string>
+    <string name="digital_assistant_setup_button">Setup now</string>
+
+    <!--app shortcut-->
+
+    <string name="shortcut_label_assistant">Assistant</string>
+    <string name="shortcut_label_assistant_long">Open selected assistant</string>
+
+    <!--app quick settings tile-->
+
+    <string name="tile_added_success">Successfully added to quick settings</string>
+    <string name="tile_already_added">Already added to quick settings</string>
+</resources>

@@ -1,0 +1,55 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/materialCardViewFilledStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="?attr/dialogPreferredPadding"
+    android:layout_marginEnd="?attr/dialogPreferredPadding"
+    android:layout_marginBottom="4dp"
+    android:clickable="true"
+    app:cardBackgroundColor="?attr/colorSecondaryContainer"
+    app:cardCornerRadius="18dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/assistant_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:tint="?attr/colorSecondary"
+            tools:src="@drawable/ic_assistant_chatgpt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/assistant_checked_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:maxLines="2"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            tools:text="@string/chatgpt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pin_button"
+            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:backgroundTint="?attr/colorPrimaryInverse"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:iconTint="?attr/colorOnPrimaryContainer"
+            tools:icon="@drawable/ic_pin_filled" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

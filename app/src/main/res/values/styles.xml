@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- components theme styles -->
+
+    <style name="Theme.Component.Material.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="widgetLayout">@layout/preference_material_switch</item>
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+
+    <style name="Theme.Component.Material.AlertDialog" parent="@style/ThemeOverlay.Material3Expressive.MaterialAlertDialog.Centered">
+        <item name="android:colorBackground">?attr/colorSurfaceContainer</item>
+        <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="dialogCornerRadius">28dp</item>
+        <item name="android:listPreferredItemHeightSmall">48dp</item>
+        <item name="android:windowMinWidthMajor">91%</item>
+        <item name="android:windowMinWidthMinor">91%</item>
+    </style>
+
+    <style name="Theme.Component.Material.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="android:layout_margin">24dp</item>
+        <item name="animationMode">slide</item>
+    </style>
+
+    <style name="Theme.Component.Material.BottomSheet" parent="@style/ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Theme.Component.BottomSheet.Modal</item>
+    </style>
+
+    <style name="Theme.Component.BottomSheet.Modal" parent="@style/Widget.Material3.BottomSheet">
+        <item name="backgroundTint">?attr/colorSurface</item>
+    </style>
+
+    <!-- preference text styles -->
+
+    <style name="Theme.TextAppearance.Preference.Title" parent="@style/TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.TextAppearance.Preference.Category" parent="@style/TextAppearance.Material3.LabelLarge">
+    </style>
+
+    <!-- preference theme styles -->
+
+    <style name="Theme.Material.Preference" parent="@style/Preference.Material">
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+
+    <style name="Theme.Material.Preference.Category" parent="@style/Preference.Category.Material">
+        <item name="allowDividerAbove">@bool/preference_config_allow_divider</item>
+        <item name="allowDividerBelow">@bool/preference_config_allow_divider</item>
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+    </style>
+
+    <style name="Theme.Material.Preference.CheckBox" parent="@style/Preference.CheckBoxPreference.Material">
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+
+    <style name="Theme.Material.Preference.EditText" parent="@style/Preference.DialogPreference.EditTextPreference.Material">
+        <item name="dialogLayout">@layout/preference_material_dialog_edittext</item>
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+
+    <style name="Theme.Material.Preference.Switch" parent="@style/Preference.SwitchPreference.Material">
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+
+    <style name="Theme.Material.Preference.Seekbar" parent="@style/Preference.SeekBarPreference.Material">
+        <item name="iconSpaceReserved">@bool/preference_config_icon_space_reserved</item>
+        <item name="layout">@layout/preference_material_settings</item>
+    </style>
+</resources>

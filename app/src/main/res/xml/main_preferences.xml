@@ -1,0 +1,90 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Preference
+        android:icon="@drawable/ic_open"
+        android:key="digital_assistant_setup"
+        android:summary="@string/pref_setup_digital_assistant_summary"
+        android:title="@string/pref_setup_digital_assistant"
+        app:layout="@layout/preference_material_warning_cardview" />
+
+    <ListPreference
+        android:defaultValue="chatgpt_assistant"
+        android:entries="@array/assistant_entries"
+        android:entryValues="@array/assistant_values"
+        android:icon="@drawable/ic_assistant"
+        android:key="digital_assistant_select"
+        android:layout="@layout/preference_material_assistant_cardview"
+        android:title="@string/pref_digital_assistant"
+        app:dialogIcon="@drawable/ic_assistant_select"
+        app:dialogTitle="@string/assistant_select"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory android:title="@string/pref_category_selector" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:dependency="digital_assistant_select"
+        android:key="assistant_selector_dialog"
+        android:summary="@string/pref_assistant_selector_summary"
+        android:title="@string/pref_assistant_selector"
+        app:iconSpaceReserved="@bool/preference_config_icon_space_reserved" />
+
+    <MultiSelectListPreference
+        android:dependency="assistant_selector_dialog"
+        android:entries="@array/assistant_entries"
+        android:entryValues="@array/assistant_values"
+        android:key="assistant_selector_visibility"
+        android:title="@string/pref_manage_assistant"
+        app:defaultValue="@array/assistant_visibility_values"
+        app:dialogIcon="@drawable/ic_assistant"
+        app:iconSpaceReserved="@bool/preference_config_icon_space_reserved"
+        app:summary="@string/pref_manage_assistant_summary" />
+
+    <PreferenceCategory
+        android:key="shortcuts"
+        android:title="@string/pref_category_shortcuts" />
+
+    <Preference
+        android:key="digital_assistant_tile"
+        android:summary="@string/pref_assistant_tile_summary"
+        android:title="@string/pref_assistant_tile" />
+
+    <PreferenceCategory android:title="@string/pref_category_appearance" />
+
+    <ListPreference
+        android:defaultValue="system"
+        android:entries="@array/theme_entries"
+        android:entryValues="@array/theme_values"
+        android:key="select_theme"
+        android:title="@string/pref_theme"
+        app:dialogIcon="@drawable/ic_theme_color"
+        app:dialogTitle="@string/theme_select"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory android:title="@string/pref_category_about" />
+
+    <Preference
+        android:key="developer"
+        android:summary="@string/pref_developer"
+        android:title="@string/pref_wstxda" />
+
+    <Preference
+        android:key="github_repository"
+        android:summary="@string/pref_source_code"
+        android:title="@string/pref_github" />
+
+    <Preference
+        android:key="library"
+        android:summary="@string/pref_used_library_summary"
+        android:title="@string/pref_used_library" />
+
+    <com.wstxda.switchai.fragment.preferences.UpdaterPreference
+        android:key="version"
+        android:summary="@string/pref_version_number"
+        android:title="@string/pref_version"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false" />
+</PreferenceScreen>
