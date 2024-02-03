@@ -1,4 +1,4 @@
-# VoiceGPT
+# Plugin-VoiceGPT
 Plugin for the ChatGPT app that replaces Google as the system's default assistant, to launch with buttons and gestures
 
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?style=flat-square)](https://www.android.com) [![API](https://img.shields.io/badge/API-24%2B-orange.svg?logo=android&style=flat-square)](https://developer.android.com/studio/releases/platforms) [![Release](https://img.shields.io/github/v/release/WSTxda/VoiceGPT?color=blue&label=Release&style=flat-square)](https://github.com/WSTxda/VoiceGPT/releases) [![Release](https://img.shields.io/github/downloads/WSTxda/VoiceGPT/total?color=brightgrey&style=flat-square)](https://github.com/WSTxda/VoiceGPT/releases)
