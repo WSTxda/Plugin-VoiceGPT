@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "GLS"
-include ':app'
+
+rootProject.name = "VoiceGPT"
+include(":app")
