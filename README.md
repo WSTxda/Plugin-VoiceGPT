@@ -10,7 +10,8 @@ Plugin for the ChatGPT app that replaces Google as the system's default assistan
 - Install [ChatGPT](https://play.google.com/store/apps/details?id=com.openai.chatgpt) official app
 - Open app and setup you account
 - Install VoiceGPT plugin
-- Go to Assist & voice input/Default digital assistant app
+- Open app and setup voice assistant in dialog (optional, if you do not want to use this feature,
+  click cancel to dismiss the dialog)
 - Select VoiceGPT
 - Done!
 
