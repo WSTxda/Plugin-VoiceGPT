@@ -6,5 +6,5 @@
     <string name="assistant_dialog_setup">Use assistant</string>
     <string name="assistant_dialog_cancel">Cancel</string>
 
-    <string name="voice_gpt_not_found">Activity not found. Please install or enable ChatGPT</string>
+    <string name="chat_gpt_not_found">Activity not found. Please install or enable ChatGPT</string>
 </resources>
