@@ -2,9 +2,11 @@ package com.wstxda.voicegpt
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Toast
@@ -12,6 +14,10 @@ import android.widget.Toast
 class VoiceGptActivity : Activity() {
 
     private lateinit var sharedPreferences: SharedPreferences
+
+    companion object {
+        const val CHAT_GPT_PACKAGE = "com.openai.chatgpt"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,21 +50,35 @@ class VoiceGptActivity : Activity() {
         finish()
     }
 
-
     private fun openAssistantActivity() {
         val intent = Intent().apply {
             action = Intent.ACTION_MAIN
             addCategory(Intent.CATEGORY_LAUNCHER)
             component =
-                ComponentName("com.openai.chatgpt", "com.openai.voice.assistant.AssistantActivity")
+                ComponentName(CHAT_GPT_PACKAGE, "com.openai.voice.assistant.AssistantActivity")
         }
         try {
             startActivity(intent)
             finish()
-        } catch (e: Exception) {
+        } catch (e: ActivityNotFoundException) {
             Toast.makeText(applicationContext, R.string.voice_gpt_not_found, Toast.LENGTH_SHORT)
                 .show()
+            openPlayStore()
             finish()
+        }
+    }
+
+    private fun openPlayStore() {
+        try {
+            val intent =
+                Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$CHAT_GPT_PACKAGE"))
+            startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://play.google.com/store/apps/details?id=$CHAT_GPT_PACKAGE")
+            )
+            startActivity(intent)
         }
     }
 }
