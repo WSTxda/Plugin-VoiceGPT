@@ -9,6 +9,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.widget.Toast
 
 class VoiceGptActivity : Activity() {
@@ -21,9 +22,14 @@ class VoiceGptActivity : Activity() {
         private const val DIALOG_SHOWN_KEY = "dialogShown"
     }
 
+    private var isDialogShown: Boolean
+        get() = sharedPreferences.getBoolean(DIALOG_SHOWN_KEY, false)
+        set(value) = sharedPreferences.edit().putBoolean(DIALOG_SHOWN_KEY, value).apply()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferences = getSharedPreferences(PREFERENCES_NAME, MODE_PRIVATE)
+
         if (isFirstTimeLaunch()) {
             showVoiceAssistantDialog()
         } else {
@@ -31,11 +37,10 @@ class VoiceGptActivity : Activity() {
         }
     }
 
-    private fun isFirstTimeLaunch() = !sharedPreferences.getBoolean(DIALOG_SHOWN_KEY, false)
+    private fun isFirstTimeLaunch() = !isDialogShown
 
     private fun showVoiceAssistantDialog() {
-        AlertDialog.Builder(this)
-            .setTitle(R.string.assistant_dialog_title)
+        AlertDialog.Builder(this).setTitle(R.string.assistant_dialog_title)
             .setMessage(R.string.assistant_dialog_summary)
             .setPositiveButton(R.string.assistant_dialog_setup) { _, _ ->
                 markDialogAsShown()
@@ -50,11 +55,16 @@ class VoiceGptActivity : Activity() {
     }
 
     private fun markDialogAsShown() {
-        sharedPreferences.edit().putBoolean(DIALOG_SHOWN_KEY, true).apply()
+        isDialogShown = true
     }
 
     private fun openVoiceInputSettings() {
-        startActivity(Intent(Settings.ACTION_VOICE_INPUT_SETTINGS))
+        val intent = Intent(Settings.ACTION_VOICE_INPUT_SETTINGS)
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        } else {
+            Toast.makeText(this, R.string.voice_input_not_available, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun launchAssistantActivity() {
@@ -68,6 +78,7 @@ class VoiceGptActivity : Activity() {
             startActivity(intent)
             finish()
         } catch (e: ActivityNotFoundException) {
+            Log.e("VoiceGptActivity", "ChatGPT app not installed", e)
             handleAssistantAppNotInstalled()
         }
     }
@@ -79,16 +90,17 @@ class VoiceGptActivity : Activity() {
     }
 
     private fun openPlayStoreListing() {
-        val playStoreIntent = Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse("market://details?id=$CHAT_GPT_PACKAGE")
-        }
-        if (playStoreIntent.resolveActivity(packageManager) != null) {
-            startActivity(playStoreIntent)
-        } else {
-            val webIntent = Intent(Intent.ACTION_VIEW).apply {
-                data = Uri.parse("https://play.google.com/store/apps/details?id=$CHAT_GPT_PACKAGE")
+        try {
+            val playStoreIntent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("market://details?id=$CHAT_GPT_PACKAGE")
             }
-            startActivity(webIntent)
+            if (playStoreIntent.resolveActivity(packageManager) != null) {
+                startActivity(playStoreIntent)
+            } else {
+                Toast.makeText(this, R.string.play_store_not_found, Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            Log.e("VoiceGptActivity", "Error opening Play Store", e)
         }
     }
 }
