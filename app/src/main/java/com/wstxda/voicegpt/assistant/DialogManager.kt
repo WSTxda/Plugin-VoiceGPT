@@ -12,7 +12,7 @@ import com.wstxda.voicegpt.ui.VoiceGptActivity
 import com.wstxda.voicegpt.utils.Extensions
 
 class DialogManager(
-    private val context: Context, private val assistantLauncher: ActivityLauncher
+    private val context: Context, private val assistantLauncher: AssistantLauncher
 ) {
     private val preferencesManager = PreferencesManager(context)
 

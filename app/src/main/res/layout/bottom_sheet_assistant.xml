@@ -41,7 +41,7 @@
             android:maxLines="10"
             android:text="@string/assistant_dialog_summary"
             android:textAppearance="?attr/textAppearanceBodyLarge"
-            android:textColor="@color/color_accent"
+            android:textColor="@color/color_accent_ripple"
             app:layout_constraintTop_toBottomOf="@id/title" />
 
         <com.google.android.material.button.MaterialButton

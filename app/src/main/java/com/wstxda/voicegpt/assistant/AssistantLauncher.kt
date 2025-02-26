@@ -1,17 +1,15 @@
 package com.wstxda.voicegpt.assistant
 
-import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.widget.Toast
 import com.wstxda.voicegpt.R
 import com.wstxda.voicegpt.ui.VoiceGptActivity
 import com.wstxda.voicegpt.utils.Extensions
 
-class ActivityLauncher(private val context: Context) {
+class AssistantLauncher(private val context: Context) {
 
     companion object {
         private const val CHAT_GPT_PACKAGE = "com.openai.chatgpt"
@@ -24,14 +22,12 @@ class ActivityLauncher(private val context: Context) {
             component = ComponentName(CHAT_GPT_PACKAGE, ASSISTANT_ACTIVITY)
         }
 
-        try {
-            Extensions.launchActivity(context, intent) {
-                (context as? VoiceGptActivity)?.finish()
-            }
-        } catch (e: ActivityNotFoundException) {
-            Log.e("AssistantLauncher", "ChatGPT app not installed", e)
+        Extensions.launchActivity(context, intent, onSuccess = {
+            (context as? VoiceGptActivity)?.finish()
+        }, onError = {
+            (context as? VoiceGptActivity)?.finish()
             handleAppNotInstalled()
-        }
+        })
     }
 
     private fun handleAppNotInstalled() {
