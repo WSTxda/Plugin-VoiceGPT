@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path
+        android:pathData="M79 4l-5.25 11.46-11.42 5.2 11.42 5.26L79 37.33l5.2-11.41 11.47-5.25-11.46-5.21M37.33 16.5L26.92 39.42 4 49.83l22.92 10.42 10.41 22.92 10.42-22.92 22.92-10.42-22.92-10.41M79 62.33l-5.25 11.42L62.33 79l11.42 5.2L79 95.68l5.2-11.46L95.68 79 84.2 73.75">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="108"
+                android:startY="23"
+                android:endX="8.5"
+                android:endY="50">
+                <item
+                    android:color="#FF3D70FF"
+                    android:offset="0.05"/>
+                <item
+                    android:color="#FFF3B3ED"
+                    android:offset="0.55"/>
+                <item
+                    android:color="#FFFFB380"
+                    android:offset="0.98"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

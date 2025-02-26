@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="18dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/drag_handler"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_device_assistant" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/soehne_regular"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/assistant_dialog_title"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textColor="@color/color_accent"
+            app:layout_constraintTop_toBottomOf="@id/drag_handler" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/soehne_regular"
+            android:gravity="start"
+            android:maxLines="10"
+            android:text="@string/assistant_dialog_summary"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="@color/color_accent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setup_button"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/soehne_bold"
+            android:text="@string/assistant_dialog_setup"
+            android:textColor="@color/color_background"
+            android:textSize="20sp"
+            app:backgroundTint="@color/color_accent"
+            app:layout_constraintTop_toBottomOf="@id/summary"
+            app:rippleColor="@color/color_accent_ripple" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:fontFamily="@font/soehne_bold"
+            android:text="@string/assistant_dialog_cancel"
+            android:textColor="@color/color_accent"
+            android:textSize="20sp"
+            app:backgroundTint="@color/color_container"
+            app:layout_constraintTop_toBottomOf="@id/setup_button"
+            app:rippleColor="@color/color_container_ripple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

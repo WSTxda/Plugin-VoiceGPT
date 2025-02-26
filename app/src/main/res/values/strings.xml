@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">VoiceGPT</string>
 
-    <string name="assistant_dialog_title">Use device voice assistant?</string>
-    <string name="assistant_dialog_summary">Would you like to set up the device voice assistant to use gestures and buttons to launch voice assistant?</string>
-    <string name="assistant_dialog_setup">Set device assistant</string>
+    <string name="assistant_dialog_title">Set device assistant?</string>
+    <string name="assistant_dialog_summary">Want to setup VoiceGPT as your default voice assistant for easy access with gestures or device buttons? Follow these steps:\n\n1. Tap the <b>Setup device assistant</b> button.\n2. Open the <b>Default digital assistant app</b> settings.\n3. Select <b>VoiceGPT</b> from the list of available apps.</string>
+    <string name="assistant_dialog_setup">Setup device assistant</string>
     <string name="assistant_dialog_cancel">Cancel</string>
 
     <string name="chat_gpt_not_found">Activity not found. Please install or enable ChatGPT</string>
