@@ -41,7 +41,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private val links = mapOf(
         "developer" to "https://github.com/WSTxda",
-        "github_repository" to "https://github.com/WSTxda/Plugin-VoiceGPT",
+        "github_repository" to "https://github.com/WSTxda/SwitchAI",
     )
 
     private fun observeViewModel() {

@@ -29,6 +29,5 @@ object Constants {
     const val CAT_PINNED_ASSISTANTS_KEY = "pinned_assistants"
     const val CAT_RECENTLY_USED_ASSISTANTS_KEY = "recently_used_assistants"
 
-    const val GITHUB_RELEASE_URL =
-        "https://api.github.com/repos/WSTxda/Plugin-VoiceGPT/releases/latest"
+    const val GITHUB_RELEASE_URL = "https://api.github.com/repos/WSTxda/SwitchAI/releases/latest"
 }
