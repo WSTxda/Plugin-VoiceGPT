@@ -25,7 +25,7 @@ object Constants {
     const val VIEW_TYPE_ASSISTANT_ITEM = 1
 
     const val PREFS_NAME = "assistant_selector_prefs"
-    const val CAT_MAX_RECENTLY_USED = 4
+    const val CAT_MAX_RECENTLY_USED = 3
     const val CAT_PINNED_ASSISTANTS_KEY = "pinned_assistants"
     const val CAT_RECENTLY_USED_ASSISTANTS_KEY = "recently_used_assistants"
 
