@@ -1,0 +1,98 @@
+<resources>
+
+    <!--app names-->
+
+    <string name="app_settings">Configurações do assistente</string>
+
+    <!--assistant names-->
+
+    <string name="chatgpt">ChatGPT</string>
+    <string name="claude">Claude</string>
+    <string name="copilot">Copilot</string>
+    <string name="deepseek">DeepSeek</string>
+    <string name="gemini">Gemini</string>
+    <string name="grok">Grok</string>
+    <string name="kimi">Kimi</string>
+    <string name="le_chat">Le Chat</string>
+    <string name="manus">Manus</string>
+    <string name="meta">Meta AI</string>
+    <string name="perplexity">Perplexity</string>
+    <string name="qwen">Qwen</string>
+    <string name="ultimate_alexa">Ultimate Alexa</string>
+
+    <!--preferences-->
+
+    <string name="pref_category_appearance">Aparência</string>
+    <string name="pref_category_selector">Seletor</string>
+    <string name="pref_category_shortcuts">Atalhos</string>
+    <string name="pref_category_about">Sobre</string>
+
+    <string name="pref_developer">Desenvolvedor</string>
+    <string name="pref_source_code">Repositório com o código fonte</string>
+
+    <string name="pref_theme">Tema</string>
+
+    <string name="pref_used_library">Bibliotecas</string>
+    <string name="pref_used_library_summary">Licenças de código aberto</string>
+
+    <string name="pref_version">Versão</string>
+
+    <string name="pref_digital_assistant">Assistente digital</string>
+
+    <string name="pref_setup_digital_assistant">Configurar assistente digital</string>
+    <string name="pref_setup_digital_assistant_summary">Definir o SwitchAI como o aplicativo de assistente digital padrão</string>
+
+    <string name="pref_assistant_selector">Usar seletor de assistente</string>
+    <string name="pref_assistant_selector_summary">Se ativado, selecione um assistente a cada vez. Caso contrário, use a opção <b>assistente digital</b></string>
+
+    <string name="pref_manage_assistant">Gerenciar assistentes</string>
+    <string name="pref_manage_assistant_summary">Escolha quais assistentes serão exibidos no seletor</string>
+
+    <string name="pref_assistant_tile">Abrir assistente digital</string>
+    <string name="pref_assistant_tile_summary">Adicionar o bloco para abrir assistente digital ao painel de configurações rápidas</string>
+
+    <!--theme selector-->
+
+    <string name="theme_select">Selecionar tema</string>
+    <!--themes modes-->
+    <string name="theme_system">Padrão do sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+
+    <!--update checker-->
+
+    <string name="update_checker_button">Verificar atualizações</string>
+    <string name="update_checker_download_button">Baixar</string>
+    <!--updater messages-->
+    <string name="update_checker_no_update">Nenhuma atualização disponível</string>
+    <string name="update_checker_update_available">Nova atualização disponível: %s</string>
+    <string name="update_checker_no_internet">Sem conexão com a internet</string>
+    <string name="update_checker_generic_error">Algo deu errado. Tente novamente mais tarde</string>
+
+    <!--digital/selector/open assistant-->
+
+    <string name="assistant_select">Selecionar assistente</string>
+    <!--selector assistant categories-->
+    <string name="assistant_category_pin">Fixados</string>
+    <string name="assistant_category_recent">Usados recentemente</string>
+    <string name="assistant_category_all">Assistentes</string>
+    <!--open assistant messages-->
+    <string name="assistant_open">Abrir assistente</string>
+    <string name="assistant_open_error">Erro ao abrir assistente</string>
+    <string name="assistant_application_not_found">Aplicativo não encontrado. Instale-o primeiro</string>
+    <string name="assistant_not_implemented">Assistente ainda não implementado…</string>
+    <!--setup digital assistant dialog-->
+    <string name="digital_assistant_setup_title">Aplicativo de assistente digital padrão</string>
+    <string name="digital_assistant_setup_message">Nas configurações, selecione o <b>SwitchAI</b> como o aplicativo de assistente digital padrão para lançar rapidamente o assistente selecionado usando gestos, botões e mais…</string>
+    <string name="digital_assistant_setup_button">Configurar agora</string>
+
+    <!--app shortcut-->
+
+    <string name="shortcut_label_assistant">Assistente</string>
+    <string name="shortcut_label_assistant_long">Abrir assistente selecionado</string>
+
+    <!--app quick settings tile-->
+
+    <string name="tile_added_success">Adicionado com sucesso às configurações rápidas</string>
+    <string name="tile_already_added">Já adicionado às configurações rápidas</string>
+</resources>
