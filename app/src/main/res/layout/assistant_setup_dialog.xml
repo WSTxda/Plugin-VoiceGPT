@@ -27,10 +27,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
         android:maxLines="2"
+        android:scrollbars="none"
         android:text="@string/digital_assistant_setup_title"
         android:textAlignment="center"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dialog_icon" />
@@ -54,7 +58,8 @@
             android:layout_height="wrap_content"
             android:maxLines="8"
             android:padding="14dp"
-            android:text="@string/digital_assistant_setup_message" />
+            android:text="@string/digital_assistant_setup_message"
+            tools:ignore="VisualLintLongText" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
@@ -66,7 +71,8 @@
         android:text="@string/digital_assistant_setup_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_container" />
+        app:layout_constraintTop_toBottomOf="@id/card_container"
+        tools:ignore="VisualLintButtonSize" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/negative_button"
@@ -77,5 +83,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/positive_button" />
+        app:layout_constraintTop_toBottomOf="@id/positive_button"
+        tools:ignore="VisualLintButtonSize" />
 </androidx.constraintlayout.widget.ConstraintLayout>

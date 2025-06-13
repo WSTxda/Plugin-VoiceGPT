@@ -5,8 +5,6 @@
     <style name="AppTheme.Base" parent="@style/Theme.Material3Expressive.DynamicColors.Dark.NoActionBar">
         <!--preference theme-->
         <item name="android:colorAccent">?attr/colorPrimary</item>
-        <item name="preferenceTheme">@style/AppTheme.Preference.Overlay</item>
-        <item name="android:textAppearanceListItem">@style/Theme.TextAppearance.Preference.Title</item>
         <!--components theme-->
         <item name="bottomSheetDialogTheme">@style/Theme.Component.Material.BottomSheet</item>
         <item name="alertDialogTheme">@style/Theme.Component.Material.AlertDialog</item>
@@ -21,11 +19,10 @@
         <item name="android:windowLightNavigationBar">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <!-- layout padding -->
-        <item name="android:listPreferredItemPaddingLeft">24dp</item>
-        <item name="android:listPreferredItemPaddingRight">24dp</item>
-        <item name="android:listPreferredItemPaddingStart">24dp</item>
-        <item name="android:listPreferredItemPaddingEnd">24dp</item>
-        <item name="android:listPreferredItemHeightSmall">72dp</item>
+        <item name="android:listPreferredItemPaddingLeft">17dp</item>
+        <item name="android:listPreferredItemPaddingRight">17dp</item>
+        <item name="android:listPreferredItemPaddingStart">17dp</item>
+        <item name="android:listPreferredItemPaddingEnd">17dp</item>
         <!--dynamic colors-->
         <item name="isMaterial3DynamicColorApplied">true</item>
     </style>

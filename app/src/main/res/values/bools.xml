@@ -1,4 +1,0 @@
-<resources>
-    <bool name="preference_config_icon_space_reserved">false</bool>
-    <bool name="preference_config_allow_divider">false</bool>
-</resources>

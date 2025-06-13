@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:background="@drawable/preference_background_bottom"
+    android:background="@drawable/preference_background_single"
     android:baselineAligned="false"
     android:clickable="true"
     android:focusable="true"
@@ -16,13 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
-        android:importantForAccessibility="no" />
+        android:layout_marginStart="16dp"
+        android:importantForAccessibility="no"
+        app:tint="?android:textColorPrimary" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
@@ -36,7 +37,7 @@
             android:ellipsize="marquee"
             android:maxLines="2"
             android:textAppearance="?attr/textAppearanceBodyLarge"
-            tools:text="@string/pref_version" />
+            tools:text="@string/pref_theme" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@android:id/summary"
@@ -47,20 +48,14 @@
             android:maxLines="8"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?android:textColorSecondary"
-            tools:text="@string/pref_version_number" />
+            tools:text="@string/theme_system" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/check_updates"
-        style="@style/Widget.Material3Expressive.Button.TonalButton"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        android:text="@string/update_checker_button"
-        android:textColor="?attr/colorOnTertiaryContainer"
-        app:backgroundTint="?attr/colorTertiaryContainer"
-        app:icon="@drawable/ic_update"
-        app:iconTint="?attr/colorOnTertiaryContainer" />
+        android:orientation="vertical" />
 </androidx.appcompat.widget.LinearLayoutCompat>
