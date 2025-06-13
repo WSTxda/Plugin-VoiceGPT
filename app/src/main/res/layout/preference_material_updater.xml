@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:maxLines="2"
-            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
             tools:text="@string/pref_version" />
 
         <com.google.android.material.textview.MaterialTextView

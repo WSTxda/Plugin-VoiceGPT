@@ -50,7 +50,7 @@
     <string name="pref_manage_assistant_summary">Escolha quais assistentes serão exibidos no seletor</string>
 
     <string name="pref_assistant_tile">Abrir assistente digital</string>
-    <string name="pref_assistant_tile_summary">Adicionar o bloco para abrir assistente digital ao painel de configurações rápidas</string>
+    <string name="pref_assistant_tile_summary">Adicionar o bloco para abrir o assistente digital ao painel de configurações rápidas</string>
 
     <string name="pref_assistant_root">Usar permissão root</string>
     <string name="pref_assistant_root_summary">Use permissão root para ativar a entrada de voz em assistentes específicos e melhorar a usabilidade</string>
