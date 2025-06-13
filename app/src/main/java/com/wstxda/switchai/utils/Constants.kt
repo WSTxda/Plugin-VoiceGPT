@@ -6,6 +6,7 @@ object Constants {
     const val DIGITAL_ASSISTANT_TILE_PREF_KEY = "digital_assistant_tile"
     const val ASSISTANT_SELECTOR_DIALOG_PREF_KEY = "assistant_selector_dialog"
     const val ASSISTANT_VISIBILITY_DIALOG_PREF_KEY = "assistant_selector_visibility"
+    const val ASSISTANT_ROOT_PREF_KEY = "assistant_root"
     const val LIBRARY_PREF_KEY = "library"
     const val THEME_PREF_KEY = "select_theme"
 

@@ -27,6 +27,7 @@
     <string name="pref_category_selector">Selector</string>
     <string name="pref_category_shortcuts">Shortcuts</string>
     <string name="pref_category_about">About</string>
+    <string name="pref_category_behavior">Behavior</string>
 
     <string name="pref_wstxda" translatable="false">WSTxda</string>
     <string name="pref_github" translatable="false">GitHub</string>
@@ -54,6 +55,9 @@
 
     <string name="pref_assistant_tile">Open digital assistant tile</string>
     <string name="pref_assistant_tile_summary">Add open digital assistant tile in quick settings panel</string>
+
+    <string name="pref_assistant_root">Use root permission</string>
+    <string name="pref_assistant_root_summary">Use root permission to enable voice input for specific assistants and improve usability</string>
 
     <!--theme selector-->
 
@@ -99,4 +103,8 @@
 
     <string name="tile_added_success">Successfully added to quick settings</string>
     <string name="tile_already_added">Already added to quick settings</string>
+
+    <!--root permission-->
+
+    <string name="root_access_error">Grant root permission first</string>
 </resources>

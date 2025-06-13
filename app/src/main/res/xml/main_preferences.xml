@@ -45,6 +45,17 @@
         app:summary="@string/pref_manage_assistant_summary" />
 
     <PreferenceCategory
+        android:layout="@layout/preference_material_category"
+        android:title="@string/pref_category_behavior"
+        app:allowDividerAbove="false" />
+
+    <SwitchPreferenceCompat
+        android:key="assistant_root"
+        android:title="@string/pref_assistant_root"
+        android:layout="@layout/preference_material_single"
+        android:summary="@string/pref_assistant_root_summary" />
+
+    <PreferenceCategory
         android:key="shortcuts"
         android:layout="@layout/preference_material_category"
         android:title="@string/pref_category_shortcuts"

@@ -26,6 +26,7 @@
     <string name="pref_category_selector">Seletor</string>
     <string name="pref_category_shortcuts">Atalhos</string>
     <string name="pref_category_about">Sobre</string>
+    <string name="pref_category_behavior">Comportamento</string>
 
     <string name="pref_developer">Desenvolvedor</string>
     <string name="pref_source_code">Repositório com o código fonte</string>
@@ -50,6 +51,9 @@
 
     <string name="pref_assistant_tile">Abrir assistente digital</string>
     <string name="pref_assistant_tile_summary">Adicionar o bloco para abrir assistente digital ao painel de configurações rápidas</string>
+
+    <string name="pref_assistant_root">Usar permissão root</string>
+    <string name="pref_assistant_root_summary">Use permissão root para ativar a entrada de voz em assistentes específicos e melhorar a usabilidade</string>
 
     <!--theme selector-->
 
@@ -95,4 +99,8 @@
 
     <string name="tile_added_success">Adicionado com sucesso às configurações rápidas</string>
     <string name="tile_already_added">Já adicionado às configurações rápidas</string>
+
+    <!--root permission-->
+
+    <string name="root_access_error">Conceda permissão root primeiro</string>
 </resources>
