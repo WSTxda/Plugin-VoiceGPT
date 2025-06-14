@@ -3,6 +3,7 @@
     <!--assistant selector-->
 
     <string-array name="assistant_entries">
+        <item>@string/alexa</item>
         <item>@string/chatgpt</item>
         <item>@string/claude</item>
         <item>@string/copilot</item>
@@ -20,6 +21,7 @@
     </string-array>
 
     <string-array name="assistant_values">
+        <item>alexa_assistant</item>
         <item>chatgpt_assistant</item>
         <item>claude_assistant</item>
         <item>copilot_assistant</item>
@@ -39,6 +41,7 @@
     <!--assistant visibility multi-choice-->
 
     <string-array name="assistant_visibility_values">
+        <item>alexa_assistant</item>
         <item>chatgpt_assistant</item>
         <item>claude_assistant</item>
         <item>copilot_assistant</item>

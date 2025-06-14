@@ -52,6 +52,20 @@
         <!--assistants activity's-->
 
         <activity
+            android:name=".assistant.AlexaAssistant"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/alexa"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".assistant.ChatGPTAssistant"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -195,7 +209,7 @@
             android:name=".assistant.MiniMaxAssistant"
             android:excludeFromRecents="true"
             android:exported="false"
-            android:label="@string/meta"
+            android:label="@string/minimax"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:theme="@style/AppTheme.Transparent">
