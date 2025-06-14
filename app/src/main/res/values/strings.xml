@@ -107,4 +107,9 @@
     <!--root permission-->
 
     <string name="root_access_error">Grant root permission first</string>
+
+    <!--multi select list preference selection-->
+
+    <string name="error_min_selection">Select at least %1$d options</string>
+    <string name="error_max_selection">Select a maximum of %1$d options</string>
 </resources>

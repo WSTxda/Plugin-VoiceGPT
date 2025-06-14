@@ -14,8 +14,10 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.wstxda.switchai.R
 import com.wstxda.switchai.activity.LibraryActivity
+import com.wstxda.switchai.fragment.preferences.MultiSelectListPreference
 import com.wstxda.switchai.fragment.preferences.DigitalAssistantPreference
 import com.wstxda.switchai.ui.TileManager
+import com.wstxda.switchai.ui.component.AssistantManagerDialog
 import com.wstxda.switchai.ui.component.DigitalAssistantSetupDialog
 import com.wstxda.switchai.utils.Constants
 import com.wstxda.switchai.viewmodel.SettingsViewModel
@@ -46,7 +48,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun observeViewModel() {
         viewModel.isAssistSetupDone.observe(this) { isDone ->
-            findPreference<Preference>(Constants.DIGITAL_ASSISTANT_SETUP_PREF_KEY)?.isVisible = !isDone
+            findPreference<Preference>(Constants.DIGITAL_ASSISTANT_SETUP_PREF_KEY)?.isVisible =
+                !isDone
         }
     }
 
@@ -77,7 +80,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun setupInitialVisibility() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
             findPreference<Preference>(Constants.DIGITAL_ASSISTANT_TILE_PREF_KEY)?.isVisible = false
-            findPreference<PreferenceCategory>(Constants.SETTINGS_CATEGORY_SHORTCUTS)?.isVisible = false
+            findPreference<PreferenceCategory>(Constants.SETTINGS_CATEGORY_SHORTCUTS)?.isVisible =
+                false
         }
     }
 
@@ -99,6 +103,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<Preference>(Constants.DIGITAL_ASSISTANT_TILE_PREF_KEY)?.setOnPreferenceClickListener {
             TileManager(requireContext()).requestAddTile()
             true
+        }
+    }
+
+    override fun onDisplayPreferenceDialog(preference: Preference) {
+        val dialogFragment = parentFragmentManager.findFragmentByTag(Constants.PREFERENCE_DIALOG)
+
+        if (dialogFragment != null) return
+
+        if (preference is MultiSelectListPreference) {
+            val dialog = AssistantManagerDialog.newInstance(preference.key)
+            @Suppress("DEPRECATION") dialog.setTargetFragment(this, 0)
+            dialog.show(parentFragmentManager, Constants.PREFERENCE_DIALOG)
+        } else {
+            super.onDisplayPreferenceDialog(preference)
         }
     }
 

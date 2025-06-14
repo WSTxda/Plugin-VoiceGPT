@@ -44,7 +44,8 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
         defaultSharedPreferences.registerOnSharedPreferenceChangeListener(this)
 
         val loadedPinnedKeys =
-            assistantStatePreferences.getStringSet(CAT_PINNED_ASSISTANTS_KEY, emptySet()) ?: emptySet()
+            assistantStatePreferences.getStringSet(CAT_PINNED_ASSISTANTS_KEY, emptySet())
+                ?: emptySet()
         pinnedAssistantKeys.clear()
         pinnedAssistantKeys.addAll(loadedPinnedKeys)
 
@@ -125,7 +126,7 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
         val defaultVisibleAssistants =
             resources.getStringArray(R.array.assistant_visibility_values).toSet()
         val visibleAssistantKeys = preferenceHelper.getStringSet(
-            Constants.ASSISTANT_VISIBILITY_DIALOG_PREF_KEY, defaultVisibleAssistants
+            Constants.ASSISTANT_MANAGER_DIALOG_PREF_KEY, defaultVisibleAssistants
         )
 
         val allVisibleAssistantDetails =
@@ -154,7 +155,13 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
             pinnedItems.add(AssistantSelectorRecyclerView.AssistantSelector(item.copy(isPinned = true)))
         }
         if (pinnedItems.isNotEmpty()) {
-            finalRecyclerViewItems.add(AssistantSelectorRecyclerView.CategoryHeader(context.getString(R.string.assistant_category_pin)))
+            finalRecyclerViewItems.add(
+                AssistantSelectorRecyclerView.CategoryHeader(
+                    context.getString(
+                        R.string.assistant_category_pin
+                    )
+                )
+            )
             finalRecyclerViewItems.addAll(pinnedItems)
         }
 
@@ -162,12 +169,24 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
         recentlyUsedAssistants.forEach { (key, timestamp) ->
             if (visibleAssistantKeys.contains(key) && !pinnedAssistantKeys.contains(key)) {
                 allVisibleAssistantDetails.find { it.key == key }?.let { item ->
-                    recentItems.add(AssistantSelectorRecyclerView.AssistantSelector(item.copy(lastUsedTimestamp = timestamp)))
+                    recentItems.add(
+                        AssistantSelectorRecyclerView.AssistantSelector(
+                            item.copy(
+                                lastUsedTimestamp = timestamp
+                            )
+                        )
+                    )
                 }
             }
         }
         if (recentItems.isNotEmpty()) {
-            finalRecyclerViewItems.add(AssistantSelectorRecyclerView.CategoryHeader(context.getString(R.string.assistant_category_recent)))
+            finalRecyclerViewItems.add(
+                AssistantSelectorRecyclerView.CategoryHeader(
+                    context.getString(
+                        R.string.assistant_category_recent
+                    )
+                )
+            )
             finalRecyclerViewItems.addAll(recentItems)
         }
 
@@ -181,7 +200,13 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
         }
 
         if (otherItems.isNotEmpty()) {
-            finalRecyclerViewItems.add(AssistantSelectorRecyclerView.CategoryHeader(context.getString(R.string.assistant_category_all)))
+            finalRecyclerViewItems.add(
+                AssistantSelectorRecyclerView.CategoryHeader(
+                    context.getString(
+                        R.string.assistant_category_all
+                    )
+                )
+            )
             finalRecyclerViewItems.addAll(otherItems)
         }
 
@@ -189,7 +214,7 @@ class AssistantSelectorViewModel(application: Application) : AndroidViewModel(ap
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
-        if (key == Constants.ASSISTANT_VISIBILITY_DIALOG_PREF_KEY) {
+        if (key == Constants.ASSISTANT_MANAGER_DIALOG_PREF_KEY) {
             loadAssistants()
         }
     }

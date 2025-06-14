@@ -103,4 +103,9 @@
     <!--root permission-->
 
     <string name="root_access_error">Conceda permissão root primeiro</string>
+
+    <!--multi select list preference selection-->
+
+    <string name="error_min_selection">Selecione pelo menos %1$d opções</string>
+    <string name="error_max_selection">Selecione no máximo %1$d opções</string>
 </resources>
