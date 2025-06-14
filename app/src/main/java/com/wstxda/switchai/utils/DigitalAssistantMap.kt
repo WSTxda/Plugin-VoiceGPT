@@ -23,7 +23,8 @@ object DigitalAssistantMap {
         "minimax_assistant" to MiniMaxAssistant::class.java,
         "perplexity_assistant" to PerplexityAssistant::class.java,
         "qwen_assistant" to QwenAssistant::class.java,
-        "ultimate_alexa_assistant" to UltimateAlexaAssistant::class.java
+        "ultimate_alexa_assistant" to UltimateAlexaAssistant::class.java,
+        "yuanbao_assistant" to YuanbaoAssistant::class.java,
     )
 
     fun launchSelectedAssistant(context: Context) {
