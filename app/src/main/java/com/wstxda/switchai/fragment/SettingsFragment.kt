@@ -19,6 +19,7 @@ import com.wstxda.switchai.fragment.preferences.DigitalAssistantPreference
 import com.wstxda.switchai.ui.TileManager
 import com.wstxda.switchai.ui.component.AssistantManagerDialog
 import com.wstxda.switchai.ui.component.DigitalAssistantSetupDialog
+import com.wstxda.switchai.fragment.preferences.AssistantIconUpdater
 import com.wstxda.switchai.utils.Constants
 import com.wstxda.switchai.viewmodel.SettingsViewModel
 import kotlinx.coroutines.launch
@@ -29,6 +30,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private val viewModel: SettingsViewModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
+    private val assistantIconUpdater: AssistantIconUpdater by lazy { AssistantIconUpdater() }
     private val digitalAssistantPreference by lazy { DigitalAssistantPreference(this) }
     private val digitalAssistantLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -62,6 +64,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
     }
 
+    override fun onDisplayPreferenceDialog(preference: Preference) {
+        val dialogFragment = parentFragmentManager.findFragmentByTag(Constants.PREFERENCE_DIALOG)
+
+        if (dialogFragment != null) return
+
+        if (preference is MultiSelectListPreference) {
+            val dialog = AssistantManagerDialog.newInstance(preference.key)
+            @Suppress("DEPRECATION") dialog.setTargetFragment(this, 0)
+            dialog.show(parentFragmentManager, Constants.PREFERENCE_DIALOG)
+        } else {
+            super.onDisplayPreferenceDialog(preference)
+        }
+    }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.main_preferences, rootKey)
         setupInitialVisibility()
@@ -71,6 +87,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun setupPreferences() {
         setupDigitalAssistantClickListener()
+        setupDigitalAssistantIconPreferenceListener()
         setupThemePreference()
         setupTilePreference()
         setupLibraryPreference()
@@ -92,6 +109,19 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
     }
 
+    private fun setupDigitalAssistantIconPreferenceListener() {
+        val listPreference = findPreference<ListPreference>(Constants.DIGITAL_ASSISTANT_SELECT_PREF_KEY)
+        listPreference?.setOnPreferenceChangeListener { preference, newValue ->
+            if (preference is ListPreference) {
+                assistantIconUpdater.updateIcon(requireContext(), preference, newValue.toString())
+            }
+            true
+        }
+        listPreference?.let { pref ->
+            assistantIconUpdater.updateIcon(requireContext(), pref, pref.value)
+        }
+    }
+
     private fun setupThemePreference() {
         findPreference<ListPreference>(Constants.THEME_PREF_KEY)?.setOnPreferenceChangeListener { _, newValue ->
             viewModel.applyTheme(newValue.toString())
@@ -103,20 +133,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<Preference>(Constants.DIGITAL_ASSISTANT_TILE_PREF_KEY)?.setOnPreferenceClickListener {
             TileManager(requireContext()).requestAddTile()
             true
-        }
-    }
-
-    override fun onDisplayPreferenceDialog(preference: Preference) {
-        val dialogFragment = parentFragmentManager.findFragmentByTag(Constants.PREFERENCE_DIALOG)
-
-        if (dialogFragment != null) return
-
-        if (preference is MultiSelectListPreference) {
-            val dialog = AssistantManagerDialog.newInstance(preference.key)
-            @Suppress("DEPRECATION") dialog.setTargetFragment(this, 0)
-            dialog.show(parentFragmentManager, Constants.PREFERENCE_DIALOG)
-        } else {
-            super.onDisplayPreferenceDialog(preference)
         }
     }
 

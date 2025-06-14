@@ -12,7 +12,7 @@
         android:defaultValue="chatgpt_assistant"
         android:entries="@array/assistant_entries"
         android:entryValues="@array/assistant_values"
-        android:icon="@drawable/ic_assistant"
+        android:icon="@drawable/ic_assistant_default"
         android:key="digital_assistant_select"
         android:title="@string/pref_digital_assistant"
         app:dialogIcon="@drawable/ic_assistant_select"

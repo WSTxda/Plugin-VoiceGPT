@@ -7,13 +7,14 @@
     android:layout_marginStart="17dp"
     android:layout_marginTop="24dp"
     android:layout_marginEnd="17dp"
+    android:layout_marginBottom="14dp"
     android:baselineAligned="true"
     app:cardBackgroundColor="?attr/colorPrimaryContainer"
     app:cardCornerRadius="18dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="380dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -24,7 +25,7 @@
             android:layout_marginStart="16dp"
             android:importantForAccessibility="no"
             android:tint="?attr/colorOnSecondaryContainer"
-            tools:src="@drawable/ic_assistant" />
+            tools:src="@drawable/ic_assistant_chatgpt" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
