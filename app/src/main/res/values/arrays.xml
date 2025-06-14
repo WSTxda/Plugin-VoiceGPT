@@ -17,6 +17,7 @@
         <item>@string/meta</item>
         <item>@string/minimax</item>
         <item>@string/perplexity</item>
+        <item>@string/qingyan</item>
         <item>@string/qwen</item>
         <item>@string/ultimate_alexa</item>
         <item>@string/wenxin_yiyan</item>
@@ -38,6 +39,7 @@
         <item>meta_assistant</item>
         <item>minimax_assistant</item>
         <item>perplexity_assistant</item>
+        <item>qingyan_assistant</item>
         <item>qwen_assistant</item>
         <item>ultimate_alexa_assistant</item>
         <item>wenxin_yiyan_assistant</item>
@@ -61,6 +63,7 @@
         <item>meta_assistant</item>
         <item>minimax_assistant</item>
         <item>perplexity_assistant</item>
+        <item>qingyan_assistant</item>
         <item>qwen_assistant</item>
         <item>ultimate_alexa_assistant</item>
         <item>wenxin_yiyan_assistant</item>

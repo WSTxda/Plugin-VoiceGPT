@@ -22,6 +22,7 @@ object DigitalAssistantMap {
         "meta_assistant" to MetaAssistant::class.java,
         "minimax_assistant" to MiniMaxAssistant::class.java,
         "perplexity_assistant" to PerplexityAssistant::class.java,
+        "qingyan_assistant" to QingyanAssistant::class.java,
         "qwen_assistant" to QwenAssistant::class.java,
         "ultimate_alexa_assistant" to UltimateAlexaAssistant::class.java,
         "wenxin_yiyan_assistant" to WenxinYiyanAssistant::class.java,

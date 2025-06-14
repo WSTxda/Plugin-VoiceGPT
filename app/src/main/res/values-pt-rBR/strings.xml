@@ -20,6 +20,7 @@
     <string name="meta">Meta AI</string>
     <string name="minimax">MiniMax"</string>
     <string name="perplexity">Perplexity</string>
+    <string name="qingyan">Qingyan</string>
     <string name="qwen">Qwen</string>
     <string name="ultimate_alexa">Ultimate Alexa</string>
     <string name="wenxin_yiyan">Wenxin Yiyan</string>
