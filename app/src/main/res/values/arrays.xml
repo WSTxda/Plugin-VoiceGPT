@@ -19,6 +19,7 @@
         <item>@string/perplexity</item>
         <item>@string/qwen</item>
         <item>@string/ultimate_alexa</item>
+        <item>@string/wenxin_yiyan</item>
         <item>@string/yuanbao</item>
     </string-array>
 
@@ -39,6 +40,7 @@
         <item>perplexity_assistant</item>
         <item>qwen_assistant</item>
         <item>ultimate_alexa_assistant</item>
+        <item>wenxin_yiyan_assistant</item>
         <item>yuanbao_assistant</item>
     </string-array>
 
@@ -61,6 +63,7 @@
         <item>perplexity_assistant</item>
         <item>qwen_assistant</item>
         <item>ultimate_alexa_assistant</item>
+        <item>wenxin_yiyan_assistant</item>
         <item>yuanbao_assistant</item>
     </string-array>
 

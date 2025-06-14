@@ -24,6 +24,7 @@ object DigitalAssistantMap {
         "perplexity_assistant" to PerplexityAssistant::class.java,
         "qwen_assistant" to QwenAssistant::class.java,
         "ultimate_alexa_assistant" to UltimateAlexaAssistant::class.java,
+        "wenxin_yiyan_assistant" to WenxinYiyanAssistant::class.java,
         "yuanbao_assistant" to YuanbaoAssistant::class.java,
     )
 

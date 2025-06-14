@@ -276,6 +276,20 @@
         </activity>
 
         <activity
+            android:name=".assistant.WenxinYiyanAssistant"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/wenxin_yiyan"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".assistant.YuanbaoAssistant"
             android:excludeFromRecents="true"
             android:exported="false"
